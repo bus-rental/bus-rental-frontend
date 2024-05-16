@@ -98,7 +98,7 @@ describe('LoggingService', () => {
       environment.production = false;
       const message = 'Test debug message';
 
-      service.error(message);
+      service.debug(message);
 
       expect(consoleDebugSpy).toHaveBeenCalledWith(message);
     });
@@ -107,7 +107,7 @@ describe('LoggingService', () => {
       environment.production = true;
       const message = 'Test debug message';
 
-      service.error(message);
+      service.debug(message);
 
       expect(consoleDebugSpy).not.toHaveBeenCalled();
     });
