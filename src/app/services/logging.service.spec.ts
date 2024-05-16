@@ -8,6 +8,7 @@ describe('LoggingService', () => {
   let consoleLogSpy: jasmine.Spy;
   let consoleWarnSpy: jasmine.Spy;
   let consoleErrorSpy: jasmine.Spy;
+  let consoleDebugSpy: jasmine.Spy;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
@@ -20,6 +21,7 @@ describe('LoggingService', () => {
     consoleLogSpy = spyOn(console, 'log');
     consoleWarnSpy = spyOn(console, 'warn');
     consoleErrorSpy = spyOn(console, 'error');
+    consoleDebugSpy = spyOn(console, 'debug');
   });
 
   afterEach(() => {
@@ -88,6 +90,26 @@ describe('LoggingService', () => {
       service.error(message);
 
       expect(consoleErrorSpy).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('debug method', () => {
+    it('should debug message when not in production', () => {
+      environment.production = false;
+      const message = 'Test debug message';
+
+      service.error(message);
+
+      expect(consoleDebugSpy).toHaveBeenCalledWith(message);
+    });
+
+    it('should not debug message when in production', () => {
+      environment.production = true;
+      const message = 'Test debug message';
+
+      service.error(message);
+
+      expect(consoleDebugSpy).not.toHaveBeenCalled();
     });
   });
 });

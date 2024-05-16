@@ -25,4 +25,10 @@ export class LoggingService {
       console.error(message);
     }
   }
+
+  debug(message: string): void {
+    if (!environment.production) {
+      console.debug(message);
+    }
+  }
 }

@@ -1,1 +1,12 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<mat-toolbar color="primary">
+  <span>büs.li</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/">Home</button>
+  <button mat-button routerLink="/about">Über uns</button>
+  <button mat-button routerLink="/contact">Kontakt</button>
+  <button mat-button routerLink="/login">Login</button>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
