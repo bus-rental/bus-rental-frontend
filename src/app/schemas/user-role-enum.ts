@@ -1,6 +1,0 @@
-export enum UserRoleEnum {
-  CUSTOMER= "CUSTOMER",
-  TRUSTED = "TRUSTED",
-  SUPERUSER = "SUPERUSER",
-  ADMIN = "ADMIN"
-}
