@@ -1,26 +1,72 @@
 .auto-card {
-    display: flex;
-    border: 1px solid #ccc;
-    padding: 16px;
-    margin: 16px;
-  }
-  
-  .left {
-    flex: 1;
-    padding: 16px;
-  }
-  
-  .right {
-    flex: 1;
-    padding: 16px;
-  }
-  
-  .details {
-    margin-top: 16px;
-  }
-  
-  .price {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-  }
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.car-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 16px;
+  margin-top: 16px;
+}
+
+.car-info-item {
+  display: contents;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  text-align: right;
+}
+
+.left {
+  flex: 1;
+  padding: 16px;
+}
+
+.right {
+  flex: 1;
+  padding: 16px;
+}
+
+.details {
+  margin-top: 16px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.price-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.price-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}

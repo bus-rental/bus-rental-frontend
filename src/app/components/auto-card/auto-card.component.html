@@ -1,23 +1,46 @@
-<div class="auto-card">
+<div class="auto-card mat-elevation-z4">
     <div class="left">
-      <!-- TODO: img -->
+        <img src="assets/charly.jpeg" alt="Auto Bild" class="car-image" />
       <div class="details">
         <p>Austattung: Feature 1, Feature 2, Feature 3</p>
         <p>Geeignet für: One liner text</p>
       </div>
     </div>
     <div class="right">
-      <h2>{{ auto.name }}</h2>
-      <p>Sitze: {{ auto.sitze }}</p>
-      <p>Handschaltung: {{ auto.handschaltung }}</p>
-      <p>Kategorie: {{ auto.kategorie }}</p>
-      <p>Masse Innen: {{ auto.masseInnen }}</p>
-      <p>Masse Aussen: {{ auto.masseAussen }}</p>
+        <h2>{{ auto.name }}</h2>
+        <div class="car-info">
+          <div class="car-info-item">
+            <span class="label">Sitze 💺:</span>
+            <span class="value">{{ auto.sitze }}</span>
+          </div>
+          <div class="car-info-item">
+            <span class="label">Handschaltung 🕹️:</span>
+            <span class="value">{{ auto.handschaltung }}</span>
+          </div>
+          <div class="car-info-item">
+            <span class="label">Kategorie 🚗:</span>
+            <span class="value">{{ auto.kategorie }}</span>
+          </div>
+          <div class="car-info-item">
+            <span class="label">Masse Innen 📐:</span>
+            <span class="value">{{ auto.masseInnen }}</span>
+          </div>
+          <div class="car-info-item">
+            <span class="label">Masse Aussen 📐:</span>
+            <span class="value">{{ auto.masseAussen }}</span>
+          </div>
+        </div>
       <div class="price">
-        <div>Preis 1 Tag: {{ auto.preis1Tag }}€</div>
-        <div>Preis Woche: {{ auto.preisWoche }}€</div>
+        <div class="price-item">
+          <div class="price-label">Preis für 1 Tag</div>
+          <div class="price-value">CHF {{ auto.preis1Tag }}</div>
+        </div>
+        <div class="price-item">
+          <div class="price-label">Preis für 1 Woche</div>
+          <div class="price-value">CHF {{ auto.preisWoche }}</div>
+        </div>
       </div>
       <mat-divider></mat-divider>
-      <button mat-flat-button>Mieten</button>
+      <button mat-flat-button color="primary">Mieten</button>
     </div>
   </div>
