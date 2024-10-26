@@ -1,0 +1,23 @@
+<div class="auto-card">
+    <div class="left">
+      <!-- TODO: img -->
+      <div class="details">
+        <p>Austattung: Feature 1, Feature 2, Feature 3</p>
+        <p>Geeignet für: One liner text</p>
+      </div>
+    </div>
+    <div class="right">
+      <h2>{{ auto.name }}</h2>
+      <p>Sitze: {{ auto.sitze }}</p>
+      <p>Handschaltung: {{ auto.handschaltung }}</p>
+      <p>Kategorie: {{ auto.kategorie }}</p>
+      <p>Masse Innen: {{ auto.masseInnen }}</p>
+      <p>Masse Aussen: {{ auto.masseAussen }}</p>
+      <div class="price">
+        <div>Preis 1 Tag: {{ auto.preis1Tag }}€</div>
+        <div>Preis Woche: {{ auto.preisWoche }}€</div>
+      </div>
+      <mat-divider></mat-divider>
+      <button mat-flat-button>Mieten</button>
+    </div>
+  </div>
