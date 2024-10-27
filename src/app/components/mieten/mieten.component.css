@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+.rent-button {
+    margin-top: 16px;
+}

@@ -1,0 +1,16 @@
+<mat-form-field appearance="fill">
+    <mat-label>Startdatum</mat-label>
+    <input matInput [matDatepicker]="startDate" (dateChange)="setStartDate($event)">
+    <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+    <mat-datepicker #startDate panelClass="startDate"></mat-datepicker>
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>Enddatum</mat-label>
+    <input matInput [matDatepicker]="endDate" (dateChange)="setEndDate($event)">
+    <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+    <mat-datepicker #endDate panelClass="startDate"></mat-datepicker>
+  </mat-form-field>
+  
+  <div class="rent-button">
+    <button mat-flat-button color="primary" (click)="rentCar()">Auto mieten</button>
+  </div>
