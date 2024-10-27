@@ -9,8 +9,8 @@
     <input matInput [matDatepicker]="endDate" (dateChange)="setEndDate($event)">
     <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
     <mat-datepicker #endDate panelClass="startDate"></mat-datepicker>
-  </mat-form-field>
-  
-  <div class="rent-button">
+</mat-form-field>
+
+<div class="rent-button">
     <button mat-flat-button color="primary" (click)="rentCar()">Auto mieten</button>
-  </div>
+</div>

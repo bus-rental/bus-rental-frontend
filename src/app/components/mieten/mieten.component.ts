@@ -21,7 +21,6 @@ import { MatButtonModule } from '@angular/material/button';
 export class MietenComponent {
   startDate = new Date();
   endDate = new Date();
-  selectedTimeSlot: string = "";
 
   setStartDate(event: any): void {
     this.startDate = event.value;
@@ -32,8 +31,8 @@ export class MietenComponent {
   }
 
   rentCar(): void {
-    if (this.startDate && this.selectedTimeSlot) {
-      console.log(`Car rented on ${this.startDate} for ${this.selectedTimeSlot}`);
+    if (this.startDate && this.endDate) {
+      console.log(`Car rented on ${this.startDate} until ${this.endDate}`);
       // Implement the logic to handle car rental
     } else {
       console.log('Please select a date and time slot');
