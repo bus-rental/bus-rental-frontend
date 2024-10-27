@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,5 +11,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  constructor(private router: Router) { }
 
+  navigateToHome(): void {
+    this.router.navigate(['/']);
+  }
 }
